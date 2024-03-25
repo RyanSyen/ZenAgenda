@@ -1,4 +1,4 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+<!-- This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
 
@@ -33,4 +33,7 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details. -->
+
+
+ZenAgenda is a productivity tool to organize and plan all your tasks inspired by Google Calendar. ZenAgenda originates from the word 'Zen' which signifies tranquility and 'Agenda' emphasizing both peace of mind with efficient scheduling. ZenAgenda with its minimalistic and intuitive interface, empowers users to efficiently manage their time and tasks. Whether scheduling meetings, planning events, or setting reminders, ZenAgenda provides a tranquil oasis where users can achieve balance and order in their daily lives, allowing them to focus on what truly matters most.
