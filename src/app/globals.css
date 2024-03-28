@@ -2,32 +2,120 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  /* .custom-btn::before,
+  .custom-btn::after {
+    @apply absolute h-full w-full left-0 top-0 -z-10 content-none block transition-opacity duration-200 ease-out;
   }
+
+  .custom-btn::before {
+    @apply bg-gradient-to-b from-transparent to-[#3c087e51] bg-opacity-30 shadow-inner shadow-[#bf97ff3d] inset-0 blur-md opacity-100;
+  }
+
+  .custom-btn::after {
+    @apply bg-gradient-to-b from-transparent  to-[#3c087e6b] bg-opacity-30 shadow-inner shadow-[#bf97ff70] inset-0 blur-md opacity-100;
+  }
+
+  .custom-btn:hover::before {
+    @apply opacity-0;
+  }
+
+  .custom-btn:hover::after {
+    @apply opacity-100;
+  } */
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+/* #region custom primary btn */
+.primary-btn {
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+  border-radius: 8px;
+  color: #f4f0ff;
+  display: block;
+  padding: 8px 16px;
+  position: relative;
+  width: max-content;
+}
+
+.primary-btn::before,
+.primary-btn::after {
+  border-radius: inherit;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+  content: "";
+  display: block;
+  transition: 0.2s opacity cubic-bezier(0.6, 0.6, 0, 1);
+}
+
+.primary-btn::before {
   background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.32) 100%
+    ),
+    rgba(113, 47, 255, 0.12);
+  box-shadow: inset 0 0 12px #bf97ff3d;
+  opacity: 1;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+.primary-btn::after {
+  background: linear-gradient(
+      180deg,
+      rgba(60, 8, 126, 0) 0%,
+      rgba(60, 8, 126, 0.42) 100%
+    ),
+    rgba(113, 47, 255, 0.24);
+  box-shadow: inset 0 0 12px #bf97ff70;
+  opacity: 0;
 }
+
+.primary-btn:hover::before {
+  opacity: 0;
+}
+
+.primary-btn:hover::after {
+  opacity: 1;
+}
+
+.primary-btn-border {
+  border-radius: inherit;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: -1;
+}
+
+.primary-btn-border::before {
+  background: linear-gradient(
+      180deg,
+      rgba(207, 184, 255, 0.24) 0%,
+      rgba(207, 184, 255, 0) 100%
+    ),
+    linear-gradient(0deg, rgba(207, 184, 255, 0.32), rgba(207, 184, 255, 0.32));
+  border-radius: inherit;
+  content: "";
+  inset: 0;
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  mask-composite: xor;
+  -webkit-mask-composite: xor;
+  padding: 1px;
+  pointer-events: none;
+  position: absolute;
+}
+/* #endregion */
