@@ -3,6 +3,7 @@ import PrimaryBtn from "@/components/common/primaryBtn";
 import { AuroraBackground } from "@/components/others/auroraBg";
 import Blackhole from "@/components/others/blackhole";
 import FallingStars from "@/components/others/fallingStars";
+import Feature from "@/components/others/features";
 import { GlobeDemo } from "@/components/others/githubGlobe";
 import GlassCard from "@/components/others/glassCard";
 import { SparklesCore } from "@/components/others/sparkles";
@@ -27,7 +28,8 @@ export default function Home() {
       <section className="">
         <Blackhole />
         <SparklesPreview />
-        <GlassCard />
+        {/* <GlassCard /> */}
+        <Feature />
       </section>
     </main>
   );

@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 
 const {
   default: flattenColorPalette,
@@ -20,6 +21,10 @@ const config = {
       screens: {
         "2xl": "1400px",
       },
+    },
+    screens: {
+      xs: "475px",
+      ...defaultTheme.screens,
     },
     fontFamily: {
       main: [
